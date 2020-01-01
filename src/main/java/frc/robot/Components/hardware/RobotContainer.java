@@ -28,7 +28,6 @@ public class RobotContainer {
 
   public RobotContainer() {
 
-    // Inits the OI as operator interface
 
     // Configure the button bindings
     configureButtonBindings();
@@ -40,5 +39,6 @@ public class RobotContainer {
   private void configureButtonBindings() {
 
   }
+  
 
 }

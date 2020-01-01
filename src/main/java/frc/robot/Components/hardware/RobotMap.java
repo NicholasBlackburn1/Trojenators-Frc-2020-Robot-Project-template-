@@ -6,4 +6,12 @@ package frc.robot.Components.hardware;
  */
 public class RobotMap {
 
+    //example Motors 
+    public static int LSpark1 = 1;
+    public static int LSpart2 = 2;
+
+    public static int RTalon1 = 3;
+    public static int RTalon2 = 3;
+
+
 }
