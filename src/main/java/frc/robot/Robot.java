@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.Components.hardware.OperatorInterface;
 import frc.robot.Components.hardware.RobotContainer;
+import frc.robot.Components.hardware.RobotHardware;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,6 +24,7 @@ import frc.robot.Components.hardware.RobotContainer;
 public class Robot extends TimedRobot {
 
   public OperatorInterface OI;
+  public RobotHardware hardware; 
 
   private Command m_autonomousCommand;
 
@@ -39,6 +41,8 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
 
     OI = new OperatorInterface();
+    hardware = new RobotHardware();
+    
     m_robotContainer = new RobotContainer();
   }
 

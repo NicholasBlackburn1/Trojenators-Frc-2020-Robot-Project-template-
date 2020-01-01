@@ -2,6 +2,7 @@ package frc.robot.Components.hardware;
 
 import edu.wpi.first.wpilibj.PWMTalonSRX;
 import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.SpeedControllerGroup;
 
 /**
  * This is where you define all your robot hardware (Ex: motor controllers, sensors etc)
@@ -11,9 +12,18 @@ public class RobotHardware{
 
     // Drive train motor controllers
 
-    Spark lSpark = new Spark(RobotMap.LSpark1);
-    Spark lSpark2= new Spark(RobotMap.LSpart2);
+   // Creates Motor Controller Objects For Robots Drive train
 
-    PWMTalonSRX rTalonSRX1 = new PWMTalonSRX(RobotMap.RTalon1);
-    PWMTalonSRX rTalonSRX2 = new PWMTalonSRX(RobotMap.RTalon2);
+    public static Spark FrontR = new Spark(RobotMap.FrontR);
+    public static Spark FrontL = new Spark(RobotMap.FrontL);
+
+    public static PWMTalonSRX BackR = new PWMTalonSRX(RobotMap.BackR);
+    public static PWMTalonSRX BackL = new PWMTalonSRX(RobotMap.BackL);
+
+   // This speed controller group links both motor controllers to run 2 motors at the same speed
+
+
+    public static SpeedControllerGroup Left = new SpeedControllerGroup(RobotHardware.FrontL, RobotHardware.BackL);
+    public static SpeedControllerGroup Right = new SpeedControllerGroup(RobotHardware.FrontR, RobotHardware.BackR);
+
 }
