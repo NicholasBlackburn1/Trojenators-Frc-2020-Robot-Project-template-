@@ -6,12 +6,6 @@ package frc.robot.Components.hardware;
  */
 public class RobotMap {
 
-    //example Motors 
-    public static int FrontR = 1;
-    public static int BackR = 2;
-
-    public static int BackL = 4;
-    public static int FrontL = 3;
-
+   
 
 }

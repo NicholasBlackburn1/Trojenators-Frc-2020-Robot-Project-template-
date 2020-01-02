@@ -25,11 +25,9 @@ public class DriveTrainSubsystem extends SubsystemBase {
   
     @Override
     public void periodic() {
+        // This is were you add your arcade drive location
 
-        final DifferentialDrive Drive = new DifferentialDrive(RobotHardware.Left,RobotHardware.Right);
-        
-        Drive.arcadeDrive(OperatorInterface.)
-
+       
     }
   }
   
