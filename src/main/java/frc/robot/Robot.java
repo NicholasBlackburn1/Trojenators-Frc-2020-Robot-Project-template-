@@ -23,10 +23,9 @@ import frc.robot.Components.hardware.RobotHardware;
  */
 public class Robot extends TimedRobot {
 
+  // Inits methods OI and hardware 
   public OperatorInterface OI;
   public RobotHardware hardware; 
-
-  private Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
 
@@ -55,13 +54,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotPeriodic() {
 
-    // Runs the Scheduler. This is responsible for polling buttons, adding
-    // newly-scheduled
-    // commands, running already-scheduled commands, removing finished or
-    // interrupted commands,
-    // and running subsystem periodic() methods. This must be called from the
-    // robot's periodic
-    // block in order for anything in the Command-based framework to work.
+    
     CommandScheduler.getInstance().run();
   }
 

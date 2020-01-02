@@ -6,5 +6,14 @@ package frc.robot.Components.hardware;
  */
 public class OperatorInterface {
 
+    // Init Driver station Controllers for Robot
+    public static void Controllers(){
+
+    }
+    // Inits Driver station buttons for Robot
+    public static void Buttons(){
+
+    }
+
     
 }

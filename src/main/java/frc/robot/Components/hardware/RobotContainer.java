@@ -38,6 +38,13 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
 
+    // inits Controllers for driver station
+    OperatorInterface.Controllers();
+
+
+    // inits buttons for  Controllers for driver station
+    OperatorInterface.Buttons();
+
   }
   
 
