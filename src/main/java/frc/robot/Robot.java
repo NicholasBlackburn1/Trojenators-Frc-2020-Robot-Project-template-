@@ -86,7 +86,7 @@ public class Robot extends TimedRobot {
   public void autonomousInit() {
 
     // Runs methods in the init auto function
-    Auto.Init();
+   
 
   }
 
