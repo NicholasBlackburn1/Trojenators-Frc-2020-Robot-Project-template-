@@ -10,11 +10,12 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import frc.robot.Components.commands.Drivetrain;
 import frc.robot.Components.hardware.OperatorInterface;
 import frc.robot.Components.hardware.RobotContainer;
 import frc.robot.Components.hardware.RobotHardware;
 import frc.robot.Robotmodes.auto.Auto;
+import frc.robot.Robotmodes.teleop.TeleOp;
+import frc.robot.Robotmodes.test.TestMode;
 
 
 /**
@@ -24,12 +25,14 @@ import frc.robot.Robotmodes.auto.Auto;
  * creating this project, you must also update the build.gradle file in the
  * project.
  */
+
+ //TODO:Learn command based commands
+
 public class Robot extends TimedRobot {
 
   // Inits methods OI and hardware 
   public OperatorInterface OI;
   public RobotHardware hardware; 
-  public Drivetrain drivetrain;
 
   private RobotContainer m_robotContainer;
 
@@ -46,10 +49,6 @@ public class Robot extends TimedRobot {
     OI = new OperatorInterface();
 
     hardware = new RobotHardware();
-
-    drivetrain = new Drivetrain();
-
-
     
     m_robotContainer = new RobotContainer();
   }
@@ -86,7 +85,7 @@ public class Robot extends TimedRobot {
   public void autonomousInit() {
 
     // Runs methods in the init auto function
-    Auto.Periodic();
+    Auto.Init();
    
 
   }
@@ -106,6 +105,9 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopInit() {
 
+    // Runs methods in the init auto function
+    TeleOp.Init();
+
   }
 
   /**
@@ -113,12 +115,16 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
+
+    TeleOp.Periodic();
   }
 
   @Override
   public void testInit() {
     // Cancels all running commands at the start of test mode.
     CommandScheduler.getInstance().cancelAll();
+
+    TestMode.Init();
   }
 
   /**
@@ -126,5 +132,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void testPeriodic() {
+
+
+    TestMode.Periodic();
   }
 }
