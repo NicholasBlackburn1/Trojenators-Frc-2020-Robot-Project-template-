@@ -23,7 +23,7 @@ public class Auto{
 
     // Runs auto functions periodic that are not part of commands (IE: every 20 ms)
 
-    public static void Perodic(){
+    public static void Periodic(){
         
     }
 

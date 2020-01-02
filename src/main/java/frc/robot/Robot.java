@@ -86,6 +86,7 @@ public class Robot extends TimedRobot {
   public void autonomousInit() {
 
     // Runs methods in the init auto function
+    Auto.Periodic();
    
 
   }
@@ -96,7 +97,8 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousPeriodic() {
 
-    Auto.Perodic();
+    //Runs Auto Methods every 20 ms
+    Auto.Periodic();
 
 
   }

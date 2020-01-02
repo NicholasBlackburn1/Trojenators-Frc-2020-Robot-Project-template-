@@ -10,11 +10,7 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
  */
 public class RobotHardware{
 
-    public Spark FrontR = new Spark(RobotMap.FrontR);
-    public Spark FrontL = new Spark(RobotMap.BackR);
-
-    public PWMTalonSRX BackRTalonSRX = new PWMTalonSRX(RobotMap.FrontL);
-    public PWMTalonSRX backLTalonSRX = new PWMTalonSRX(RobotMap.BackL);
+  
 
 
     
