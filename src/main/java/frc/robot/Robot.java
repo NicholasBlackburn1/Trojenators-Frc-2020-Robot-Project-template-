@@ -8,11 +8,14 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj2.command.Command;
+
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.Components.commands.Drivetrain;
 import frc.robot.Components.hardware.OperatorInterface;
 import frc.robot.Components.hardware.RobotContainer;
 import frc.robot.Components.hardware.RobotHardware;
+import frc.robot.Robotmodes.auto.Auto;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -26,6 +29,7 @@ public class Robot extends TimedRobot {
   // Inits methods OI and hardware 
   public OperatorInterface OI;
   public RobotHardware hardware; 
+  public Drivetrain drivetrain;
 
   private RobotContainer m_robotContainer;
 
@@ -40,7 +44,12 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
 
     OI = new OperatorInterface();
+
     hardware = new RobotHardware();
+
+    drivetrain = new Drivetrain();
+
+
     
     m_robotContainer = new RobotContainer();
   }
@@ -76,6 +85,9 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
 
+    // Runs methods in the init auto function
+    Auto.Init();
+
   }
 
   /**
@@ -83,6 +95,10 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousPeriodic() {
+
+    Auto.Perodic();
+
+
   }
 
   @Override
